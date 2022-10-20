@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  console.log("Enter the size of the array")
+  let size=parseInt(prompt());
+  // console.log(typeof(size));
+  // console.log("the size is",size);
+  let arr=[];
+  for(let i=0;i<size;i++){
+     arr[i]=prompt();
+  }
+ //  searching an array
+   document.writeln('Arr Elements:'+"<br>");
+   for(var i=0;i<arr.length;i++){
+    document.write(arr[i]+",");
+   }
+  // adding an elements in array
+  arr.push("Guava");
+  document.write("<br><br>"+"Arr Elements after adding items:"+"<br>"+arr);
+  //removing a last  element from array
+  arr.pop();
+  document.write("<br><br>"+"Arr Elements after deleting items using pop:"+"<br>"+arr);
+  //removing a first element from array
+  arr.shift();
+  document.write("<br><br>"+"Arr Elements after deleting items using shift:"+"<br>"+arr);
+  arr.unshift("gooseberry");
+  document.write("<br><br>"+"Arr Elements after adding items using unshift:"+"<br>"+arr);
+
+//local storage
+localStorage.clear();
+localStorage.setItem("array", arr);
+document.write("<br><br>The length of the local storage is : ",localStorage.length);  
+document.write("<br><br>The element present in the local storage is:",localStorage.getItem("array",arr));
+
+
+</script>
+</html>
+  
